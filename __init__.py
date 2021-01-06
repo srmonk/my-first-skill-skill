@@ -14,11 +14,8 @@ class MyFirstSkill(MycroftSkill):
         
     @intent_handler('skill.study.intent')
     def handle_skill_study(self, message):
-        time = extract_duration(self.get_response('skill.study'))[0]
-        self.speak_dialog('skill.study.confirmation', {'time': str(time)})
-        
         blocks = extract_duration(self.get_response('skill.study'))[0]
-        self.speak_dialog('skill.study.confirmation', {'time': str(t)})
+        self.speak_dialog('skill.study.confirmation', {'time': str(blocks)})
         blocks = int(blocks)
         for i in range(blocks):
             time.sleep(1500)
