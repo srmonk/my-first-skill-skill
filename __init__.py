@@ -16,12 +16,12 @@ class MyFirstSkill(MycroftSkill):
         #for i in range(blocks):
          #   time.sleep(1500)
           #  if i <  blocks-1:
-           #     self.speak_dialog('skill.study.break.begin')
+           #     self.speak_dialog('skill.breakbegin')
             #    time.sleep(300)
-             #   self.speak_dialog('skill.study.break.end') 
+             #   self.speak_dialog('skill.breakend') 
        #     if i == blocks-1:
         #        break
-        #self.speak_dialog('skill.study.end') 
+        #self.speak_dialog('skill.end') 
 
 
 
