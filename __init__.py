@@ -9,6 +9,7 @@ class MyFirstSkill(MycroftSkill):
         
     @intent_handler('skill.study.intent')
     def handle_skill_study(self, message):
+        self.speak_dialog('skill.study')
         blocks = extract_duration(self.get_response('skill.study'))[0]
         self.speak_dialog('skill.study.confirmation', {'time': str(blocks)})
         blocks = int(blocks)
