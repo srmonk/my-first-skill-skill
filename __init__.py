@@ -11,9 +11,7 @@ class MyFirstSkill(MycroftSkill):
     def handle_skill_study(self, message):
         blocks = extract_duration(self.get_response('skill.study'))[0]
         self.speak_dialog('skill.study.confirmation', {'time': str(blocks)})
-        blocks = int(blocks)
-        self.log.debug()
-        self.log.error()
+        blocks = int(str(blocks))
         for i in range(blocks):
             time.sleep(1500)
             if i <  blocks-1:
