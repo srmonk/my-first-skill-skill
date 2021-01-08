@@ -9,7 +9,8 @@ class MyFirstSkill(MycroftSkill):
         
     @intent_handler('skill.study.intent')
     def handle_skill_study(self, message):
-        blocks = extract_duration(self.get_response('skill.study'))[0]
+        #blocks = extract_duration(self.get_response('skill.study'))[0]
+        blocks = self.get_response('skill.study')
         self.speak_dialog('skill.study.confirmation', {'time': str(blocks)})
 # To convert  blocks to an int, itt first needs to be a  string. The variable must be of time int for us to be able to put it into a range for the  loop
         blocks = str(blocks[3])
