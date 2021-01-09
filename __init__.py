@@ -15,10 +15,10 @@ class MyFirstSkill(MycroftSkill):
         blocks = str(blocks)
         blocks = int(blocks)
         for i in range(blocks):
-            time.sleep(25)
+            time.sleep(1500)
             if i <  blocks-1:
                 self.speak_dialog('skill.breakbegin')
-                time.sleep(5)
+                time.sleep(300)
                 self.speak_dialog('skill.breakend') 
             if i == blocks-1:
                 break
